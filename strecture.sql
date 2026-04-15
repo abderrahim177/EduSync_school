@@ -38,3 +38,13 @@ CREATE Table courses (
     user_id INT ,
     Foreign Key (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE enrollments (
+    id INT PRIMARY KEY  AUTO_INCREMENT,
+    enrolled_at DATE ,
+    status VARCHAR(225),
+    student_id INT,
+    course_id INT,
+    Foreign Key (student_id) REFERENCES students(id),
+    Foreign Key (course_id) REFERENCES courses(id)
+);
