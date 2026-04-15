@@ -1,0 +1,6 @@
+CREATE DATABASE edusync;
+USE edusync;
+CREATE TABLE roles (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    label VARCHAR(225)
+);
