@@ -29,3 +29,12 @@ CREATE TABLE students (
     Foreign Key (user_id) REFERENCES users(id),
     Foreign Key (classe_id) REFERENCES classes(id)
 );
+
+CREATE Table courses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(225),
+    description VARCHAR(225),
+    total_hours INT ,
+    user_id INT ,
+    Foreign Key (user_id) REFERENCES users(id)
+);
