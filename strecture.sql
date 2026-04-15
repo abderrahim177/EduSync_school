@@ -20,3 +20,12 @@ CREATE TABLE classes (
     name VARCHAR(225),
     classroom_number INT 
 );
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT ,
+    dateofbirth DATE ,
+    student_number INT ,
+    user_id INT ,
+    classe_id  INT ,
+    Foreign Key (user_id) REFERENCES users(id),
+    Foreign Key (classe_id) REFERENCES classes(id)
+);
